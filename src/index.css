@@ -5,9 +5,48 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f9f4f4 ;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.jumbotron{
+  background: url(./img-0.jpg)! important;
+  background-size: cover! important;
+}
+
+.jumbotron p{
+
+  color:rgb(255, 255, 255);
+  text-shadow: 5px 2px 10px rgb(97, 97, 97);
+  font-size: 2.5rem;
+  font-family: "Fredoka One"! important;
+}
+
+.btn{
+  box-shadow: 3px 1px 10px rgb(97, 97, 97);
+}
+
+.error{
+
+  background-color: #eb474b ;
+  width: 40%;
+  margin:auto;
+  font-size: 1.5rem! important;
+  box-shadow: 3px 10px 10px rgb(97, 97, 97);
+
+}
+
+.card-img-top{
+  height: 150px;
+  
+}
+
+
+.card{
+
+  padding: .3rem;
 }
