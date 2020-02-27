@@ -3,56 +3,56 @@ import Error from './Error'
 import PropTypes from 'prop-types';
 
 
-const Form = ({saveSearch}) => {
+    const Form = ({saveSearch}) => {
 
-    const [ term, saveTerm] = useState('');
-    const [error, saveError] = useState(false);
+        const [ term, saveTerm] = useState('');
+        const [error, saveError] = useState(false);
 
-    const Search = e =>{
+        const Search = e =>{
 
-    e.preventDefault();
+        e.preventDefault();
 
-    //Validate
+        //Validate
 
-    if(term.trim() === ''){
+        if(term.trim() === ''){
 
-        saveError(true);
-        return;
-    }
+            saveError(true);
+            return;
+        }
 
-    saveError(false);
+        saveError(false);
 
-    saveSearch(term);
+        saveSearch(term);
 
-    }
+        }
 
 
 
-    return ( 
-        <form
-        onSubmit={Search}>
-            <div className="row">
-                <div className="form-group col-md-8">
-                    <input
-                    type="text"
-                    className="form-control form-control-md"
-                    placeholder="Search image"
-                    onChange= {e => saveTerm(e.target.value)}
-                    />
+        return ( 
+            <form
+            onSubmit={Search}>
+                <div className="row">
+                    <div className="form-group col-md-8">
+                        <input
+                            type="text"
+                            className="form-control form-control-md"
+                            placeholder="Search image"
+                            onChange= {e => saveTerm(e.target.value)}
+                        />
+                    </div>
+                    <div className="form-group col-md-4">
+                        <input
+                            type="submit"
+                            className="btn btn-md btn-info  btn-block btn-t"
+                            value="Search"
+                        />
+                    </div>
+
                 </div>
-                <div className="form-group col-md-4">
-                    <input
-                    type="submit"
-                    className="btn btn-md btn-secondary  btn-block"
-                    value="Search"
-                    />
-                </div>
-
-            </div>
-            {error ? <Error message="Please. Add a term" /> :null}
-        </form>
-     );
-}
+                {error ? <Error message="Please. Add a term" /> :null}
+            </form>
+        );
+    }
 
 Form.propTypes = {
     saveSearch:PropTypes.func.isRequired
