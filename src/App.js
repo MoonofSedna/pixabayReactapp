@@ -86,7 +86,7 @@ import Error from './components/Error';
           <img src={imagen} alt="logo" className=" img-l"/>
         </div>
         <div className="jumbotron">
-          <h1 className="lead">Pic Catcher</h1>
+          <h1 className="lead">Search Images</h1>
           <Form
             saveSearch={saveSearch}/>
         </div>
